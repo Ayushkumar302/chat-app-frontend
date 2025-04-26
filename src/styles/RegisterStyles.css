@@ -1,0 +1,88 @@
+/* RegisterStyles.css */
+
+.FormContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    background: linear-gradient(to bottom right, #040c0e, #111c1f); /* Gradient from dark to slightly lighter color */
+  }
+  
+  .FormContainer .brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .FormContainer .brand img {
+    height: 5rem;
+  }
+  
+  .FormContainer .brand h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.5rem; /* Increase font size for impact */
+    letter-spacing: 2px; /* Add some letter spacing */
+    font-family: 'Arial', sans-serif; /* Use a sans-serif font for modern look */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Add a smooth hover effect */
+  }
+  
+  .FormContainer .brand h1:hover {
+    transform: scale(1.1); /* Scale up the text on hover for a cool effect */
+  }
+  .FormContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #132226;
+    border-radius: 2rem;
+    padding: 3rem 5rem;
+  }
+  
+  .FormContainer input {
+    background-color: transparent;
+    padding: 1rem;
+    border: 0.1rem solid teal;
+    border-radius: 0.4rem;
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  .FormContainer input:focus {
+    border: 0.1rem solid turquoise;
+    outline: none;
+  }
+  
+  .FormContainer button {
+    background-color: rgba(64, 224, 208, 0.914);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .FormContainer button:hover {
+    background-color: teal;
+  }
+  
+  .FormContainer span {
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  .FormContainer span a {
+    color: rgb(0, 175, 175) ;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
