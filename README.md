@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+﻿# WhizChat Frontend 🌐
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend client for **WhizChat**, a highly secure, real-time, and beautifully designed chat application.
 
-## Available Scripts
+## 🛠️ Tech Stack
+- **React.js** (UI Library)
+- **Tailwind CSS v3** (Modern utility-first styling & responsiveness)
+- **Socket.io-client** (Real-time updates & WebSockets)
+- **Axios** (API requests configured for cross-origin credentials)
+- **React Router Dom** (Client-side routing)
+- **React Toastify** (Notifications)
 
-In the project directory, you can run:
+## 🌟 Key Features
+- **Sleek Dark Mode UI**: A completely custom, modern dark UI featuring glassmorphism (translucency and blur effects) and dynamic gradients.
+- **Responsive Design**: Built mobile-first. The sidebar and chat area toggle seamlessly on smaller screens to ensure a native-app-like experience.
+- **Global Secure Authentication**: Uses `axiosInstance` with `withCredentials: true` globally to handle seamless, secure authentication using `HttpOnly` cookies. No JWTs are stored in local storage!
+- **Real-time Online Indicators**: Instantly see who is online via pulsing green dot badges.
+- **Explore & Connect**: Dedicated pages to find new users and manage friend requests.
 
-### `npm start`
+## 🚀 Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Prerequisites
+- Node.js installed
+- The WhizChat Backend running on `http://localhost:5000`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. Installation
+Clone the repository and install dependencies:
+```bash
+git clone https://github.com/Ayushkumar302/chat-app-frontend.git
+cd chat-app-frontend
+npm install
+```
 
-### `npm test`
+### 3. Environment Variables
+Create a `.env` file in the root of the project.
+*(Note: Because we use create-react-app, all environment variables must start with `REACT_APP_`)*
+```env
+REACT_APP_LOCALHOST_KEY="chat-app-current-user"
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. Running the App
+```bash
+npm start
+```
+The app will start on `http://localhost:3000`.
 
-### `npm run build`
+## 🎨 Design Philosophy
+This app was completely refactored from raw CSS to Tailwind CSS to provide a highly scalable design system. We prioritized visual excellence, avoiding generic colors in favor of curated dark mode tokens and subtle micro-animations (like hover effects and smooth scrolling).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 License
+This project is open-source and available under the MIT License.
