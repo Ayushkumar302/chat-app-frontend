@@ -78,6 +78,9 @@ export default function Register() {
           process.env.REACT_APP_LOCALHOST_KEY,
           JSON.stringify(data.user)
         );
+        if (data.token) {
+          localStorage.setItem("chat-app-token", data.token);
+        }
         navigate("/chat");
       }
     }
