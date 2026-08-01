@@ -14,7 +14,7 @@ export default function Contacts({ contacts, changeChat, currentUser, currentCha
 
   return (
     <>
-      {currentUserImage && currentUserName && (
+      {currentUserName && (
         <div className="flex flex-col w-full h-full bg-zinc-900/50">
           
           {/* Header */}
@@ -38,9 +38,9 @@ export default function Contacts({ contacts, changeChat, currentUser, currentCha
                 >
                   <div className="shrink-0 relative">
                     <img
-                      src={`data:image/svg+xml;base64,${contact.avatarImage}`}
+                      src={contact.avatarImage ? `data:image/svg+xml;base64,${contact.avatarImage}` : `https://api.dicebear.com/7.x/bottts/svg?seed=${contact.username}`}
                       alt="avatar"
-                      className="h-12 w-12 rounded-full bg-white p-0.5"
+                      className="h-12 w-12 rounded-full bg-white p-0.5 object-cover"
                     />
                     {isOnline && (
                       <span className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 border-2 border-zinc-900 rounded-full shadow-sm animate-pulse"></span>
@@ -58,9 +58,9 @@ export default function Contacts({ contacts, changeChat, currentUser, currentCha
           <div className="flex items-center justify-center gap-4 p-4 bg-black/40 border-t border-white/5">
             <div className="shrink-0">
               <img
-                src={`data:image/svg+xml;base64,${currentUserImage}`}
+                src={currentUserImage ? `data:image/svg+xml;base64,${currentUserImage}` : `https://api.dicebear.com/7.x/bottts/svg?seed=${currentUserName}`}
                 alt="avatar"
-                className="h-14 w-14 rounded-full bg-white p-1"
+                className="h-14 w-14 rounded-full bg-white p-1 object-cover"
               />
             </div>
             <div className="min-w-0">

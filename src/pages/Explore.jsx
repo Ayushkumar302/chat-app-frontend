@@ -98,9 +98,9 @@ export default function Explore() {
                     <div key={user._id} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center hover:-translate-y-1 transition-all duration-300 hover:bg-white/10 hover:shadow-[0_4px_20px_rgba(168,85,247,0.15)]">
                       <div className="mb-4">
                         <img
-                          src={`data:image/svg+xml;base64,${user.avatarImage}`}
+                          src={user.avatarImage ? `data:image/svg+xml;base64,${user.avatarImage}` : `https://api.dicebear.com/7.x/bottts/svg?seed=${user.username}`}
                           alt="avatar"
-                          className="h-24 w-24 rounded-full bg-white p-1"
+                          className="h-24 w-24 rounded-full bg-white p-1 object-cover"
                         />
                       </div>
                       <h3 className="text-xl font-bold text-white mb-1 truncate w-full">{user.username}</h3>

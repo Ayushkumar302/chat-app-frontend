@@ -100,9 +100,9 @@ export default function Requests() {
                       <div className="flex items-center gap-4 w-full sm:w-auto">
                         <div className="shrink-0">
                           <img
-                            src={`data:image/svg+xml;base64,${req.avatarImage}`}
+                            src={req.avatarImage ? `data:image/svg+xml;base64,${req.avatarImage}` : `https://api.dicebear.com/7.x/bottts/svg?seed=${req.username}`}
                             alt="avatar"
-                            className="h-16 w-16 rounded-full bg-white p-1"
+                            className="h-16 w-16 rounded-full bg-white p-1 object-cover"
                           />
                         </div>
                         <div className="min-w-0">
