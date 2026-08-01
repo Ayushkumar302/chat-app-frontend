@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-white font-sans m-0 p-0 overflow-x-hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+
+.Toastify__toast-theme--dark {
+  background-color: #18181b !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 0.5rem !important;
+}
+
+/* Loader CSS */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #18181b;
+  border-top-color: #a855f7;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
