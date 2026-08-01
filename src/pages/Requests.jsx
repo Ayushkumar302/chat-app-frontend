@@ -22,7 +22,7 @@ export default function Requests() {
   useEffect(() => {
     const checkUser = async () => {
       if (!localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
-        navigate("/login");
+        navigate("/");
       } else {
         setCurrentUser(
           await JSON.parse(

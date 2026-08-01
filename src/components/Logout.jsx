@@ -15,12 +15,12 @@ export default function Logout() {
       const data = await axiosInstance.get(`${logoutRoute}/${id}`);
       if (data.status === 200) {
         localStorage.clear();
-        navigate("/login");
+        navigate("/");
       }
     } catch (err) {
       console.error(err);
       localStorage.clear();
-      navigate("/login");
+      navigate("/");
     }
   };
   return (
